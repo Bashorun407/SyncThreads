@@ -7,7 +7,7 @@ import java.util.List;
 public class SynchronizedThreads {
 
     // a static variable
-    public static int count = 0;
+    private static int count = 0;
 
     public static void main(String[] args) throws InterruptedException {
         //a list which contains threads
