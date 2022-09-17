@@ -18,7 +18,7 @@ public class SynchronizedThreads {
         //for loop to create 10000 threads
         for (int i = 0; i < noOfThreads; i++){
             //new thread being created with each iteration
-            var t = new Thread(SynchronizedThreads::increasedCounts); //each new thread increments the counter variable
+            var t = new Thread(SynchronizedThreads::increaseCounts); //each new thread increments the counter variable
             allThreads.add(t); //thread is added to the allThreads list
             t.start(); //thread starts executing
         }
@@ -38,7 +38,7 @@ public class SynchronizedThreads {
     }
 
     // this static method also ensures synchronized increment of count
-    public static void increasedCounts(){
+    public static void increaseCountWithSyncBlock(){
         synchronized (SynchronizedThreads.class){
             count++;
         }
