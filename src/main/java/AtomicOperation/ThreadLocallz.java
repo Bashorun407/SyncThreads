@@ -13,13 +13,17 @@ public class ThreadLocallz implements Runnable{
     public static void main(String[] args) {
         ThreadLocallz runThread = new ThreadLocallz();
 
-        var thread1 = new Thread(runThread);
-        var thread2 = new Thread(runThread);
+//        var thread1 = new Thread(runThread);
+//        var thread2 = new Thread(runThread);
 
         //starting the two threads
-        thread1.start();
-        thread2.start();
+//        thread1.start();
+//        thread2.start();
 
+        for (int i = 0; i < 100; i++){
+            var t = new Thread(runThread);
+            t.start();
+        }
     }
     //implementing run method of the Runnable interface
 
